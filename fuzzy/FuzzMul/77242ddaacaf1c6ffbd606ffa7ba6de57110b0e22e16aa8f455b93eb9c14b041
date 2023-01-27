@@ -1,3 +1,0 @@
-go test fuzz v1
-int(11259375)
-int(16702629)

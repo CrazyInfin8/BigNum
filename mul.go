@@ -30,7 +30,7 @@ func (l BigInt) Mul(r BigInt) (n BigInt){
 			buf >>= 8
 		}
 		m[i+j] = byte(buf & 0xFF)
-		n.Add(m[:j])
+		n.AddInPlace(m[:j])
 		m.ZeroOut()
 	}
 	// Negate number if value should be negative (could probably move this to another function later)

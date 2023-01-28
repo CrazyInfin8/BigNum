@@ -65,9 +65,9 @@ func FuzzAdd(f *testing.F) {
 	f.Fuzz(func(t *testing.T, a int, b int) {
 		aBig := FromInt(int(a))
 		bBig := FromInt(int(b))
-		aBig.Add(bBig)
+		new := aBig.Add(bBig)
 		iStr := intToHex(a + b)
-		bStr := aBig.toHex()
+		bStr := new.toHex()
 		if iStr != bStr {
 			t.Errorf("Values don't match: ( %s | %s )\nL: %s (%d)\nR: %s (%d)", iStr, bStr, intToHex(a), a, intToHex(b), b)
 		}
@@ -79,9 +79,9 @@ func FuzzSub(f *testing.F) {
 	f.Fuzz(func(t *testing.T, a int, b int) {
 		aBig := FromInt(int(a))
 		bBig := FromInt(int(b))
-		aBig.Sub(bBig)
+		new := aBig.Sub(bBig)
 		iStr := intToHex(a - b)
-		bStr := aBig.toHex()
+		bStr := new.toHex()
 		if iStr != bStr {
 			t.Errorf("Values don't match: ( %s | %s )\nL: %s (%d)\nR: %s (%d)", iStr, bStr, intToHex(a), a, intToHex(b), b)
 		}

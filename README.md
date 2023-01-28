@@ -8,7 +8,7 @@ This is mostly a learning experiment for me and is not currently ready to be use
 
 ## Simple(-ish)
 
-As this is a learning experiment for me, I tried to keep things (relatively) simple. Each operation is also not optimized and their implementations are mainly based on grade school math. Most (soon to be all) operations also create new objects for the results instead of performing the operation in place, which could consume more memory but is easier to implement for now.
+As this is a learning experiment for me, I tried to keep things (relatively) simple. Each operation is also not optimized and their implementations are mainly based on grade school math. Almost all operations also create new objects for the results instead of performing the operation in place, which could consume more memory but is easier to implement for now.
 
 Each digit of BigInt is a base-256 number represented by a single byte. In the future, this could potentially be extrapolated to use base-4294967296 (32-bits per digit) or base-18446744073709551616 (64-bits per digit). For now it is easier to compare multiple bytes against native 32/64-bit numbers for testing.
 
@@ -24,6 +24,7 @@ Each digit of BigInt is a base-256 number represented by a single byte. In the f
 - ✅ `*` Multiplication
 - ❌ `/` Division
 - ✅ `>>`/`<<` Bit shifting
+- ❌ `==`/`<`/`>` Comparison
 - ❌ Exponents
 - ❌ Roots
 - ❌ Logorithms
@@ -35,6 +36,7 @@ Each digit of BigInt is a base-256 number represented by a single byte. In the f
 - ❌ `*` Multiplication
 - ❌ `/` Division
 - ❌ `>>`/`<<` Bit shifting
+- ❌ `==`/`<`/`>` Comparison
 - ❌ Exponents
 - ❌ Roots
 - ❌ Logorithms
